@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo app</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = "main-container">
+        <div class = "bg-container">
+            <img src = "bg-mobile-light.jpg" class = "bg-mobile">
+            <img src = "bg-desktop-light.jpg" class = "bg-desktop">
+        </div>
+        <div class = "content-container">
+            <div class = "header-container">
+                <h1 class = "main-heading">todo</h1>
+                <img src = "icon-moon.svg" class = "color-toggle">
+            </div>
+            <div class = "input-container">
+                <div class = "input-main">
+                    <div class = "check-box">
+                        <div class = "check-box-border"></div>
+                        <div class = "check-box-bg"></div>
+                    </div>
+                   <input type = "text" class = "input-field" placeholder = "Create a new todo...">
+                </div> 
+            </div>
+            <div class = "todo-container">           
+                <div class = "filter-container">
+                    <div class = "filter-main">
+                        <p class = "left-to-do"><span class = "no-of-items">0</span> item(s) left</p>
+                        <div class = "filter">
+                            <div class = "sub-filter">
+                                <p class = "filter-all filterings current">all</p>
+                               <p class = "filter-active filterings">active</p>
+                               <p class = "filter-completed filterings">completed</p> 
+                            </div>
+                        </div>
+                        <p class = "clr-complete">clear completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class = "footer">Drag and drop to reorder list</p>
+    </div>
+    <script src = "main.js"></script>
+</body>
+</html>

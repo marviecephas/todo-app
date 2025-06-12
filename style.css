@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing:border-box;
+}
+#main-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    position:relative;
+    width:100vw;
+    min-height:100vh;
+    background:hsl(0, 0%, 98%);
+}
+.bg-container{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:200px;
+}
+.bg-container>*{
+    width:100%;
+    height:100%;
+}
+.bg-desktop{
+    display:none;
+}
+.content-container{
+    position:relative;
+    display:flex;
+    width:100%;
+    min-height:90vh;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.content-container>*{
+    width:300px;
+}
+.header-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:40px 0 30px 0;
+}
+.main-heading{
+    font-size:2em;
+    font-weight:700;
+    letter-spacing:10px;
+    text-transform:uppercase;
+    color:hsl(0, 0%, 100%);
+}
+.input-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:45px;
+    border-radius:5px;
+    background:hsl(0, 0%, 100%);
+    margin-bottom:20px;
+}
+.input-main{
+    height:100%;
+    width:270px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+.check-box{
+    width:23px;
+    height:20px;
+    margin-right:10px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:0;
+}
+.check-box-bg{
+    width:20px;
+    height:20px;
+    position:absolute;
+    border-radius:50%;
+    background:hsl(0, 0%, 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:2;
+}
+.check-box-border{
+    position:relative;
+    width:23px;
+    height:23px;
+    border-radius:50%;
+    background:hsl(236, 33%, 92%);
+    z-index:1;
+}
+.check-box:hover .check-box-border{
+    background:linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.input-field{
+    outline:none;
+    border:none;
+    color:hsl(236, 9%, 61%);
+    font-size:1em;
+    font-weight:400;
+    background:inherit;
+}
+.input-field::placeholder{
+    color:hsl(236, 9%, 61%);
+    font-size:1em;
+    font-weight:400;
+}
+.filter-container{
+    width:100%;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px;
+    background:hsl(0, 0%, 100%);
+    box-shadow:1px 5px 7px hsla(236, 9%, 61%, .3);
+}
+.filter-main{
+    width:270px;
+    height:100%;
+    display:flex;
+    position:relative;
+    align-items:center;
+    justify-content:space-between;
+    border-radius:5px;
+}
+.filter{
+    position:absolute;
+    width:300px;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:65px;
+    left:-15px;
+    border-radius:5px;
+    background:hsl(0, 0%, 100%);
+    box-shadow:1px 5px 7px hsla(236, 9%, 61%, .3);
+}
+.filter-main>*{
+    font-size:1em;
+    font-weight:400;
+    color:hsl(236, 9%, 61%);
+}
+.sub-filter{
+    width:200px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    align-items:center;
+}
+.sub-filter>*{
+    text-transform:capitalize;
+    font-size:1em;
+    font-weight:700;
+    color:hsl(236, 9%, 61%);
+}
+.filter-all{
+    color:hsl(220, 98%, 61%);
+}
+.todo-main{
+    width:300px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px 5px 0 0;
+    background:hsl(0, 0%, 100%);
+    border-bottom:1px solid hsl(233, 11%, 84%);
+}
+.sub-todo{
+    width:270px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius:5px;
+}
+.sub-todo-main{
+    display:flex;
+    align-items:center;
+}
+.todo{
+    color:hsl(235, 19%, 35%);
+    font-size:1em;
+    font-weight:400;
+}
+.rm-todo{
+    width:16px;
+    height:16px;
+}
+.footer{
+     color:hsl(236, 9%, 61%);
+     font-weight:400;
+     font-size:1em;
+ }
+ @media (min-width:725px)
+ {
+    .content-container>*{
+        width:550px;
+    }
+    .filter{
+        position:relative;
+        top:0;
+        left:0;
+        width:180px;
+    }
+    .sub-filter{
+        width:100%;
+    }
+    .input-main, .filter-main, .sub-todo{
+        width:500px;
+    }
+    .input-field:hover, .todo{
+        cursor:pointer;
+    }
+    .sub-filter>*:hover, .clr-complete:hover{
+        cursor:pointer;
+        color:hsl(235, 19%, 35%);
+    }
+    .check-box::after:hover{
+        background:linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    }
+ }
