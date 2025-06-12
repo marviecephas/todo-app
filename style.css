@@ -205,7 +205,7 @@
  }
  @media (min-width:725px)
  {
-    .content-container>*{
+    .content-container>*, .todo-main{
         width:550px;
     }
     .filter{
@@ -213,6 +213,7 @@
         top:0;
         left:0;
         width:180px;
+        box-shadow:none;
     }
     .sub-filter{
         width:100%;
@@ -230,4 +231,5 @@
     .check-box::after:hover{
         background:linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     }
- }
+    }
+    
