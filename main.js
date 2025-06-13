@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         todoCon.style.background = 'hsl(235, 24%, 19%)';
         todoCon.querySelectorAll('.todo-main').forEach(value => {
+            value.querySelector('.check-box-bg').style.background = (active.includes(value.querySelector('.todo').innerHTML)) ? 'hsl(235, 24%, 19%)' : 'linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+            value.querySelector('.check-box-border').style.background = (active.includes(value.querySelector('.todo').innerHTML)) ? 'hsl(237, 14%, 26%)' : 'linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+})
+        todoCon.querySelectorAll('.todo-main').forEach(value => {
             value.style.background = 'hsl(235, 24%, 19%)';
             value.style.borderColor = 'hsl(233, 14%, 35%)';
         });
@@ -110,6 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         todoCon.style.background = 'hsl(0, 0%, 100%)';
+        todoCon.querySelectorAll('.todo-main').forEach(value => {
+            value.querySelector('.check-box-bg').style.background = (active.includes(value.querySelector('.todo').innerHTML)) ? 'hsl(0, 0%, 100%)' : 'linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+            value.querySelector('.check-box-border').style.background = (active.includes(value.querySelector('.todo').innerHTML)) ? 'hsl(236, 33%, 92%)' : 'linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))';
+})
         todoCon.querySelectorAll('.todo-main').forEach(value => {
             value.style.background = 'hsl(0, 0%, 100%)';
             value.style.borderColor = 'hsl(233, 11%, 84%)';
@@ -282,3 +290,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+ 
+ 
