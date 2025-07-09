@@ -1,2 +1,3 @@
 # todo-app
-what do you want to do today? a frontend mentor solution.
+what do you want to do today?
+`https://marviecephas.github.io/todo-app/`
